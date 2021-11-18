@@ -12,7 +12,8 @@ export default class CreateNote extends Component {
         content: '',
         date: new Date(),
         editing: false,
-        _id: ''
+        _id: '',
+        compTitle: 'Create Note'
     }
 
     async componentDidMount() {
@@ -29,9 +30,10 @@ export default class CreateNote extends Component {
                 content: res.data.content,
                 date: new Date(res.data.date),
                 editing: true,
-                _id: this.props.match.params.id
+                _id: this.props.match.params.id,
+                compTitle: 'Edit Note'
             });
-        }
+        } 
    }
 
     onSubmit = async (e) => {
@@ -65,7 +67,7 @@ export default class CreateNote extends Component {
         return (
             <div className="col-md-6 offset-md-3">
                 <div className="card card-body">
-                    <h3>Create Note</h3>
+                    <h3>{this.state.compTitle}</h3>
 
                     {/** SELECT USER */}
                     <div className="form-group">
