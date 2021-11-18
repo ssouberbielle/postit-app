@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
+import logo from '../images/note-logo.ico'
+import postitLogo from '../images/post-it-logo.png'
 
 export default class Navigation extends Component {
     render() {
@@ -7,7 +9,7 @@ export default class Navigation extends Component {
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
-                    <img src="../images/logo192.png" alt="" width="30" height="30" className="d-inline-block align-top"/>Post It!
+                    <img src={postitLogo} alt="" width="50" height="50" className="d-inline-block align-text-center"data-bs-toggle="tooltip" data-bs-placement="bottom" title="Created by Tato y Agus!"/>Post It! App
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -22,9 +24,6 @@ export default class Navigation extends Component {
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/user">Create User</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link disabled" to="">About</Link>
                             </li>
                         </ul>
                     </div>

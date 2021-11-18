@@ -46,7 +46,7 @@ export default class CreateUser extends Component {
                     <div className="card card-body">
                     <h3>Create New User</h3>
                     <form onSubmit={this.onSubmit}>
-                        <div className="form-group">
+                        <div className="form-group mt-2">
                             <input 
                             type="text"
                             value={this.state.username}
@@ -54,7 +54,7 @@ export default class CreateUser extends Component {
                             className="form-control"
                             onChange={this.onChangeUsername}  />
                         </div>
-                        <button type="submit" className="btn btn-primary">
+                        <button type="submit" className="btn btn-primary mt-2">
                             Save
                         </button>
                     </form>
@@ -67,9 +67,9 @@ export default class CreateUser extends Component {
                             (<li 
                                 className="list-group-item list-group-item-action" 
                                 key={user._id}>
-                                {user.username}
+                                <span className="mt-5">{user.username}</span>
                                 <div className="d-grid gap-2 d-md-flex justify-content-md-end">
-                                    <button type="button" className="btn-close float-right" onClick={() => this.deleteUser(user._id)} aria-label="Close"></button>
+                                    <button type="button" className="btn-close float-right mb-3" onClick={() => this.deleteUser(user._id)} aria-label="Close"></button>
                                 </div>    
                             </li>) )
                         }
