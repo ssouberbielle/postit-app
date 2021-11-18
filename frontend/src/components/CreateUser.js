@@ -49,7 +49,8 @@ export default class CreateUser extends Component {
                         <div className="form-group">
                             <input 
                             type="text"
-                            value={this.state.username} 
+                            value={this.state.username}
+                            placeholder="Insert username" 
                             className="form-control"
                             onChange={this.onChangeUsername}  />
                         </div>
