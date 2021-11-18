@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 export default class Navigation extends Component {
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{background: '#fffoo'}}>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
                     <img src="../images/logo192.png" alt="" width="30" height="30" className="d-inline-block align-top"/>Post It!
